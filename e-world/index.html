@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>E-life World</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+<body>
+	<h1>E-Life</h1>
+<script src="assets/js/grid.js"></script>
+<script src="assets/js/world.js"></script>
+<script src="assets/js/creatures.js"></script>
+<script src="assets/js/lifelikeworld.js"></script>
+<script src="assets/js/animateworld.js"></script>
+<script type="text/javascript">
+
+	var valley = new LifelikeWorld(
+		  ["########################################################",
+		   "##### @     **#**#  ***   ***#####***   O **###***######",
+		   "##   ***       O            *****       ***  O      **##",
+		   "#*  *##**         **  O  @      O #    ####     # O  *##",
+		   "#*   ***     O ***##**     **    *#   # O       #     *#",
+		   "#*      O        *##***    **O   *#   #               O#",
+		   "#*O           @  *##**           *#    ####     ***** *#",
+		   "#*  *##**                   *#    #*   O   #   O****  *#",
+		   "#*    #     #***      O     *#    #*       #    ***   *#",
+		   "#***        ##***   O  #      ####     ####     #**  **#",
+		   "##*** O   ###***O ****@ *** O  **@       ***     O  *###",
+		   "########################################################"],
+		  {'#': Wall, 'O': PlantEater, '*': Plant, '@': Predators}
+		);
+	
+	animateWorld(valley);
+
+</script>
+</body>
+</html>
